@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./Assets/file.png">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Grab & Go</title>
+
+    <style>
+        .slider-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-bar:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #93D500;
+            top: 0;
+            left: -100%;
+            transition: left 0.3s ease-in-out;
+        }
+        .slider-bar:hover:before {
+            left: 0;
+        }
+
+    
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+    .comforter-brush-regular {
+        font-family: 'Comforter Brush', cursive;
+        font-weight: 500;
+        font-style: normal;
+    }
+</style>
+        
+
+</head>
+<body>
+    
+    <header class="lg:px-16 px-6 bg-white flex flex-wrap items-center py-4 sticky top-0 bg-white shadow-lg" style="position: sticky; top: 0; z-index: 1000; background-color: #fff;">
+        <div class="flex-1 flex-column items-center justify-center ml-20">
+            <a href="Index.html">
+                <img alt="Clean Creations logo" title="Clean Creations logo" onerror="this.src='https://cleancreations.com/assets/images/logo-holder.png'" src="https://cleancreations.com/data/config/client_logo.png?md=f341c123680491a1ca69dd7a67ca190e" class="h-10 w-15 ml-10">
+            </a>
+            <p class="text-[#93D500] text-lg">Clean Creation</p>
+        </div>
+    
+        <label for="menu-toggle" class="pointer-cursor md:hidden block">
+            <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 20">
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+    
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                    <li><a class="md:p-4 py-3 px-0 block text-lg hover:text-black slider-bar" href="#">Blogs Home</a></li>
+                    <li class="relative group">
+                        <a class="md:p-4 py-3 px-0 block text-lg slider-bar" href="#">Shop</a>
+                        <ul class="dropdown-arrow absolute hidden text-gray-700 pt-1 group-hover:block bg-white border rounded shadow-lg">
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">Bulk Meals</a></li>
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">Meal Plans</a></li>
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">À la Carte</a></li>
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">Custom Meal Builder</a></li>
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">Gift Card</a></li>
+                            <li><a class="bg-white py-4 px-10 block whitespace-nowrap hover:text-[#93D500]" href="#">Extras</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="md:p-4 py-3 px-0 block text-lg hover:text-black slider-bar" href="grab&go.html">Grab & Go</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-lg hover:text-black slider-bar" href="#">About</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-lg hover:text-black slider-bar" href="#">F.A.Q</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-lg hover:text-black slider-bar" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bg-[#93D500] flex justify-center py-20 items-center h-20">
+        <p class="text-white text-6xl comforter-brush-regular">Try our grab and go location.</p>
+    </div>
+
+    
+    <div class="bg-[#FF7E30] text-center text-lg h-20">
+        <p class="text-white">Hours Of Operation</p>
+        <p class="text-white">Monday-Friday 7-7 Saturday 8-4 Sunday 8-4</p>
+    </div>
+    <div class="text-center font-bold mt-10 text-3xl">
+        <p>
+            (Call ahead for curbside pickup <span class="text-[#0074DB]">504-309-5427</span> )
+        </p>
+    </div>
+    
+
+    <div class="container p-4 flex flex-row justify-center items-center mt-20">
+        <!-- Image Section -->
+        <div class="w-1/2 mr-0 md:w-1/2 flex justify-center">
+            <img id="image-51-500" alt="Clean Creations" src="https://resources.cleancreations.com/wp-content/uploads/2020/03/CleanCreations_Feb2020Lifestyle_Feb82020-15-scaled.jpg" class="" style="height: 5% ; width: 90%;">
+        </div>
+        <!-- Google Map Section -->
+        <div class="w-1/2 md:w-1/2 ml-0 flex justify-center">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4732109290415!2d-90.05477678488998!3d29.905626981926154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620af58cbe0bb77%3A0xc6e2c1de8e07e83d!2sClean%20Creations!5e0!3m2!1sen!2sus!4v1629059174048!5m2!1sen!2sus" 
+                width="805" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                style="height: 100%;"
+            ></iframe>
+        </div>
+    </div>
+
+    <div class="flex flex-inline ml-20 mr-20 mt-32 mb-32">
+        <div>
+          <img src="https://resources.cleancreations.com/wp-content/uploads/2020/03/CleanCreations_FoodShoot1_Feb112020-383.jpg" alt="Lettuce wraps" class="w-80 h-auto">
+        </div>
+        <div>
+          <img src="https://resources.cleancreations.com/wp-content/uploads/2020/03/Copy-of-Copy-of-Copy-of-Blue-Typographic-Social-Media-Graphic-300x300.png" alt="Woman holding water jug" class="w-full mt-20 h-auto">
+        </div>
+        <div>
+          <img src="https://resources.cleancreations.com/wp-content/uploads/2020/03/CleanCreations_Feb2020Lifestyle_Feb82020-328-scaled.jpg" alt="Woman in a cafe" class="w-80 h-auto">
+        </div>
+        <div class="ml-10">
+          <img src="https://resources.cleancreations.com/wp-content/uploads/2020/03/CleanCreations_Feb2020Lifestyle_Feb82020-114-300x200.jpg" alt="Four smoothies" class="w-80 mt-32 h-auto">
+        </div>
+      </div>
+
+      <div class="text-center text-6xl comforter-brush-regular mb-10">What's in our coolers</div>
+
+      <div class="flex flex-row justify-between ml-10 mr-56 text-6xl comforter-brush-regular">
+        <div>entrees</div>
+        <div>Vegan/Vegetarian Meals</div>
+      </div>
+
+      <div class="container mx-auto flex flex-column justify-between">
+        <div class="">
+          <div class="flex flex-inline justify-between text-xl p-4 border-b">
+            <h3 class="text-xl mr-96">Ahi Tuna Salad</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$14.50</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Harissa Chicken</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Salmon Teriyaki Bowl</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Powerhouse Turkey Chili</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Jambalaya Shrimp and Smoked Chicken</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Fajita Chicken Bowl</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Ahi Tuna Salad</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Buffalo Ranch Burger Bowl</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.95</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Harissa Chicken</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.25</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Salmon Teriyaki Bowl</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$15.95</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Powerhouse Turkey Chili</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$11.05</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Jambalaya Shrimp and Smoke Chicken</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.75</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Fjita Chicken Bowl</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.30</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 border-b">
+            <h3 class="text-xl">Buffalo Ranch Burger Bowl</h3>
+          </div>
+        </div>
+        <div class="text-xl">
+            <div class="flex flex-inline justify-between p-4 border-b">
+                <h3 class="text-xl mr-44">Balsamic Mushroom and Cheese Pizza</h3>
+                <p class="text-gray-600 font-extrabold mt-2">$13.75</p>
+              </div>
+              <div class="flex flex-inline justify-between p-4 border-b">
+                <h3 class="text-xl">Vegan Jambalaya</h3>
+                <p class="text-gray-600 font-extrabold mt-2">$13.25</p>
+              </div>
+              <div class="text-5xl comforter-brush-regular mt-10">Low Carb Meals</div>
+        </div>
+      </div>
+
+      <div class="text-6xl comforter-brush-regular ml-10 mt-10">breakfast</div>
+
+
+      <div class="container mx-auto flex flex-column justify-between">
+        <div class="">
+          
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Fajita Chicken Bowl</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Ahi Tuna Salad</h3>
+          </div>
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Buffalo Ranch Burger Bowl</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.95</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4 ">
+            <h3 class="text-xl">Harissa Chicken</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$13.25</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Salmon Teriyaki Bowl</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$15.95</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Powerhouse Turkey Chili</h3>
+            <p class="text-gray-600 font-extrabold mt-2">$11.05</p>
+          </div>
+          <div class="flex flex-inline justify-between p-4">
+            <h3 class="text-xl">Jambalaya Shrimp and Smoke Chicken</h3>
+            <p class="text-gray-600 font-extrabold ml-48 mt-2">$13.75</p>
+          </div>
+          
+        </div>
+        <div class="text-xl">
+            <div></div>
+        </div>
+      </div>
+
+
+      <footer class="mt-44">
+        <div class="flex justify-between items-center text-white">
+            <div class="ml-20">
+                <div class="flex-1 flex-column justify-center ml-20">
+                    <a href="Index.html">
+                        <img alt="Clean Creations logo" title="Clean Creations logo" onerror="this.src='https://cleancreations.com/assets/images/logo-holder.png'" src="https://cleancreations.com/data/config/client_logo.png?md=f341c123680491a1ca69dd7a67ca190e" class="h-20 w-22 ml-10">
+                    </a>
+                    <p class="text-[#93D500] text-2xl mb-32">Clean Creations</p>
+                </div>
+            </div>
+            <div class="ml-4 mb-20">
+                <h2 class="text-xl text-[#93D500] mt-4">Clean Creations</h2>
+                <ul class="space-y-2 text-black text-lg">
+                    <li><a href="#" class=" hover:text-[#8ED444]">About Us</a></li>
+                    <li><a href="grab&go.html" class=" hover:text-[#8ED444]">Grab & Go</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Contact Us</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Privacy Policy</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">F.A.Q.</a></li>
+                </ul>
+            </div>
+            <div class="ml-4 mb-20">
+                <h2 class="text-xl text-[#93D500] mt-10">Order Meals</h2>
+                <ul class="space-y-2 text-lg text-black">
+                    <li><a href="#" class=" hover:text-[#8ED444]">Bulk Menu</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Meal Plan</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">À la Carte</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Custom Meal Buider</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Gift Card</a></li>
+                    <li><a href="#" class=" hover:text-[#8ED444]">Extras</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col text-lg gap-2">
+                <h3 class="text-xl text-[#93D500]">Contact Us</h3>
+                <a href="tel:504-309-5427" class="text-blue-500">504-309-5427</a>
+                <a href="mailto:customerservice@cleancreations.net" class="text-blue-500 mb-44 mr-20">customerservice@cleancreations.net</a>
+              </div>
+        </div>
+      </div>
+      </footer>       
+    
+   
+
+    <script src="clean.js"></script>
+
+</body>
+</html>

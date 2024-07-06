@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="font-sans">
+
+    <!-- ########### NAV BAR ########## -->
+    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md shadow-lg shadow-black/50 sticky top-0 bg-white shadow-lg" style="position: sticky; top: 0;
+    z-index: 1000; /* Adjust this value as needed to make sure it's higher than other elements */
+    background-color: #fff; ">
+        <div class="flex-1 flex justify-between items-center ml-20 mr-7">
+            <img alt="Clean Creations logo" title="Clean Creations logo" onerror="this.src='https://cleancreations.com/assets/images/logo-holder.png'" src="https://cleancreations.com/data/config/client_logo.png?md=f341c123680491a1ca69dd7a67ca190e" class=" h-15 w-15">
+        </div>
+    
+        <label for="menu-toggle" class="pointer-cursor md:hidden block">
+          <svg class="fill-current text-gray-900"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 20">
+            
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+    
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4   md:pt-0">
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="">Shop</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="./currentmenu.html">Current Menu</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Select Meals</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="grab&go.html">Grab & Go</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="./blog.html">Blog</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Login</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Sign Up</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm md:mb-0 mb-2 mr-56 hover:text-black hover:font-bold" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <a href="cartPreview.html">
+            <div>
+                <div class="link_icon d-flex align-items-center justify-content-center w-100 px-2 mr-10" style="width: 110px; height: 50px; border-radius: 30px; background-color: #2d2d2d; gap: 5px; display: flex;">
+                    <i class="fas fa-shopping-bag" style="color: #fff; font-size: 20px; display: inline; margin-top: 15px; margin-left: 15px;"></i>
+                    <p style="color: #fff; margin-top: 15px;" class="totalPrice-cart-float bold">$0.00</p>
+                    <span class="badge totalItemBadge wrapTotalItemBadge" style="background: red; display: none;"></span>
+                </div>
+            </div>
+            </a>
+            </div>
+    </header>
+    <div class="bg-white py-4 flex justify-between items-center shadow-md px-6 md:px-16 mt-2">
+        <div class="flex items-center space-x-4">
+          <div class="flex items-center mr-32">
+            <img src="phone.svg" alt="" srcset="" class="w-6 h-6 ">
+            <span class="ml-2 text-gray-700">504-309-5427</span>
+          </div>
+          <div class="flex items-center">
+            <img src="envelope.svg" alt="" srcset="" class="w-6 h-6 ">
+            <span class="ml-2 text-gray-700">customerservice@cleancreations.net</span>
+          </div>
+        </div>
+        <div class="mr-96 ">
+          <div class="flex items-center">
+            <img src="google.png" alt="Google Logo" class="w-6 h-6">
+            <a href="https://www.google.com/search?q=google+clean+creations&rlz=1C5CHFA_enUS834US834&oq=google+clean+creations&aqs=chrome..69i57j69i64.3439j0j4&sourceid=chrome&ie=UTF-8#lrd=0x8620a6936c929f63:0xde3ec33732ca53cb,3,,," target="_blank" class="text-black font-bold hover:text-[#3CD65B]">Review on Google</a>
+          </div>
+        </div>
+        <div class="flex items-center w-50 fixed right-20 top-20 bg-white rounded-lg p-4 z-50">
+            <img src="clock.svg" alt="" srcset="" class="w-7 h-7 ">
+            <div id="timer" class="text-lg font-bold font-sans">
+              <span id="days">00</span> days 
+              <span id="hours">00</span> h 
+              <span id="minutes">00</span> m 
+              <span id="seconds">00</span> s
+            </div>
+          </div>
+        </div>
+
+
+
+    <!-- .......................main page.............. -->
+<div class="p-5">
+    <div class= "mx-20  border border-gray-100 rounded">
+        <div class="mb-5 p-2 flex space-x-4">
+            <div class="flex-1 ">
+                <label class="block text-gray-400 font-semibold text-xs mb-1">Categories</label>
+                <input type="text" id="floating-categories" class="block py-2 ps-6 pe-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:shadow-sm peer" placeholder="Filter by Category " />
+        
+            </div>
+    
+            <div class="flex-1 ">
+                <label class="block text-gray-400 text-xs font-semibold mb-1">Search</label>
+                <input type="text" name="txSearch_df9006c3997365dcc04a79c22deea76a" id="txSearch_df9006c3997365dcc04a79c22deea76a" maxlength="100" size="50" placeholder="search" class="block w-full p-1 px-3 border border-gray-100 bg-gray-100  shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" autocomplete="off">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ....................cards line 1............... -->
+<div class="max-w-screen-xl mx-auto py-5 sm:p-10 md:p-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto ">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="Capture.PNG" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-2xl">Trouble Sleeping?</p>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="2.jpg" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-xl">Superfood-Packed Morning Smoothie for a Healthy Start</p>
+            </div>
+        </div>
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="logo.png" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-xl">Local Spin Instructor Regains Her Momentum</p>
+            </div>
+        </div>
+        </div>
+    </div>
+<br>
+<!-- ......................card line 2................ -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="flex inline-flex gap-4">
+    <div class="rounded overflow-hidden shadow-lg w-2/3 mx-auto">
+       
+        <a href="#"></a>
+        <div class="relative mx-auto mt-20 ">
+            <a href="#">
+                <img class="w-full " src="4.PNG" alt="Sunset in the mountains">
+                <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+            </a>
+            <a href="!#">
+                <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="px-4 py-2">
+            <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+            <p class="text-gray-700 text-xl">Superfood-Packed Morning Smoothie for a Healthy Start</p>
+        </div>
+    </div>
+    <div class="rounded overflow-hidden shadow-lg w-3/2 mx-auto">
+        <a href="#"></a>
+        <div class="relative">
+            <a href="#">
+                <img class="w-full" src="5.PNG" alt="Sunset in the mountains">
+                <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+            </a>
+            <a href="!#">
+                <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path>
+                    </svg>
+                </div>
+            </a>
+            
+        </div>
+        <div class="px-4 py-2">
+            <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+            <p class="text-gray-700 text-xl">Local Spin Instructor Regains Her Momentum</p>
+        </div>
+    </div>
+</div>
+    <div class="rounded overflow-hidden shadow-lg w-full mx-auto ">
+        <a href="#"></a>
+        <div class="relative">
+            <a href="#">
+                <img class="w-full" src="shrimp.PNG" alt="Sunset in the mountains">
+                <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+            </a>
+            <a href="!#">
+                <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="px-4 py-2">
+            <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+            <p class="text-gray-700 text-2xl">Trouble Sleeping?</p>
+        </div>
+    </div>
+   
+</div>
+<br>
+<!-- ....................cards line 3............ -->
+
+    
+    <div id="posts-container" class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4  gap-4">
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="44.jpg" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-2xl">The Best Meal Plans for Moms on the Go</p>
+            </div>
+        </div>
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="8.webp" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-xl">The cons of Exercise: Why Healthy Eating is More Important</p>
+            </div>
+        </div>
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="22.jpg" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-xl">Is Your Child Addicted to Sugar? Here's What You Can Do</p>
+            </div>
+        </div>
+        <div class="rounded overflow-hidden shadow-lg w-full mx-auto">
+            <a href="#"></a>
+            <div class="relative">
+                <a href="#">
+                    <img class="w-full" src="Capture 2.PNG" alt="Sunset in the mountains">
+                    <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+                </a>
+        
+                <a href="!#">
+                    <div class="text-sm absolute top-0 right-0 bg-gray-500 bg-opacity-50 px-4 text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 hover:bg-black transition duration-500 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="px-4 py-2">
+                <a href="#" class="font-semibold text-xs inline-block text-gray-400 transition duration-500 ease-in-out">Best jun 03, 2024</a>
+                <p class="text-gray-700 text-xl">Emotional Eating in Children: Are You Missing the Signs?</p>
+            </div>
+        </div>
+
+        
+       
+    </div>
+</div>
+
+    <div class="flex justify-center  ">
+        <button id="see-more-button" class="bg-[#8ED444] h-7 w-56 hover:bg-gray-700 justify-center text-center border border-gray-700 text-white text-sm rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex inline-flex">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+              </svg>
+              
+            See More Posts
+        </button>
+    </div>
+</div>
+<br>
+ <div>
+    <img class="h-56 w-full" src="image.PNG" alt="">
+ </div>
+ <br> <br>
+ <div class="post-header mb-3">
+    <div class=" mx-20 flex justify-between items-center">
+        <div class="post-author flex items-center">
+            <img alt=" " title=" " src="shrimp.PNG" class="w-12 h-12 rounded-full">
+            <div class="author-details ml-3">
+                <div class="author-name font-semibold"> </div>
+                <div class="post-date text-gray-500">Jun 03, 2022</div>
+            </div>
+        </div>
+        <div class="flex inline-flex" >
+             <svg  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32" viewBox="0 0 30 30">
+                <path d="M 23 3 A 4 4 0 0 0 19 7 A 4 4 0 0 0 19.09375 7.8359375 L 10.011719 12.376953 A 4 4 0 0 0 7 11 A 4 4 0 0 0 3 15 A 4 4 0 0 0 7 19 A 4 4 0 0 0 10.013672 17.625 L 19.089844 22.164062 A 4 4 0 0 0 19 23 A 4 4 0 0 0 23 27 A 4 4 0 0 0 27 23 A 4 4 0 0 0 23 19 A 4 4 0 0 0 19.986328 20.375 L 10.910156 15.835938 A 4 4 0 0 0 11 15 A 4 4 0 0 0 10.90625 14.166016 L 19.988281 9.625 A 4 4 0 0 0 23 11 A 4 4 0 0 0 27 7 A 4 4 0 0 0 23 3 z"></path> 
+                </svg>
+                <button class="text-3xl mx-2 text-black font-bold">Share</button>
+            
+       
+            
+            <span class="clipboard-alert linkCopied hidden absolute top-full mt-2 px-4 py-2 bg-green-500 text-white rounded"><i class="fas fa-check mr-2"></i>Link copied</span>
+        </div>
+    </div>
+    <br> 
+             <hr class="mx-20">
+    <div class="post-summary mt-3">
+        <div class="post-categories">
+             
+             <br>
+        </div>
+        <h1 class=" mx-20 post-title text-4xl font-bold">Blog</h1>
+    </div>
+    <br> 
+    <br>
+             <hr class="mx-20">
+             <div class="post-related my-4 mx-20">
+                <div class="main-title text-lg font-semibold mb-4">Related posts</div>
+                <div class="error-posts-related">
+                    <div class=" text-black text-sm">Invalid post id</div>
+                </div>
+                <div class="grid-posts-related grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <!-- Posts related list -->
+                </div>
+            </div>
+            
+</div>
+<!-- ......................footer.................. -->
+<div class="container-fluid marginControl footer footer-v2 subfooter-v2 back_footer custom_class_footer bg-[#2D2D2D] text-white py-10">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between mobile_center">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4  md:mb-0 text-center md:text-left">
+                <div class="text-4xl font-bold mb-7">Clean Creations</div>
+                <p>
+                    <a class="text_footer text-white hover:text-[#8ED444]" href="tel:504-309-23413" title="Clean Creations Phone">504-309-23413</a><br>
+                    <a class="text_footer text-white hover:text-[#8ED444]" href="mailto:customerservice@gmail.com" title="Clean Creations Email">customerservice@gmail.com</a>
+                </p>
+                <button type="button" class="btn p-1 rounded client_custom_btn text-sm  bg-white text-gray-800 mt-4" onclick="ml_account('webforms', '1369566', 'i3g8d0', 'show')">
+                    Sign Up for our Newsletter
+                </button>
+                <div id="invite_btn" class="btn p-1 rounded flex inline-flex text-sm  text-center client_custom_btn bg-white text-gray-800 mt-4">
+                    <div class="invite" data-toggle="modal" data-target="#inviteFriend">Invite a friend</div>
+                </div>
+                <br><br><br>
+                <div class=" flex inline-flex" >
+                    
+                    <a href="">
+                    <div class="text-sm  bg-white text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                            <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
+                            </svg>
+                    </div>
+                </a> 
+                <a href="">
+                    <div class="text-sm  bg-white text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="100" height="100" viewBox="0 0 48 48">
+                            <path d="M44,24H4c0,0.338,0,1.662,0,2c0,11.028,8.972,20,20,20s20-8.972,20-20C44,25.662,44,24.338,44,24z"></path><circle cx="24" cy="24" r="22" fill="#fff"></circle><path d="M24,44C12.972,44,4,35.028,4,24S12.972,4,24,4s20,8.972,20,20S35.028,44,24,44z M24,6C14.075,6,6,14.075,6,24	s8.075,18,18,18s18-8.075,18-18S33.925,6,24,6z"></path><path d="M26.573,29.038h4.921l0.765-4.993h-5.686V21.31c0-2.078,0.675-3.913,2.618-3.913h3.122v-4.363	c-0.549-0.072-1.709-0.234-3.895-0.234c-4.579,0-7.26,2.411-7.26,7.917v3.329h-4.696v4.993h4.696v13.728	C22.093,42.901,23.028,43,24,43c0.873,0,1.727-0.081,2.573-0.198V29.038z"></path>
+                            </svg>
+                    </div>
+                </a> 
+                <a href="">
+                    <div class="text-sm  bg-white text-white rounded-full h-9 w-9 flex flex-col items-center justify-center mt-3 mr-3 ">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                            </svg>
+                    </div>
+                </a> 
+                </div>
+                <br><br>
+                <div class="col-xs-12 col-sm-6 text-left mobile_center">
+                    <p class="text-sm">© 2024 Clean Creations. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/4 lg:w-1/6 px-4 mb-8 md:mb-0">
+                <div class="text-xl font-semibold mb-2">Clean Creations</div>
+                <ul class="text_footer">
+                    <li><a href="currentmenu.html" class="text-sm ">Current Menu</a></li>
+                    <li><a href="" class="text-sm ">Contact Us</a></li>
+                    <li><a href="" class="text-sm ">Privacy Policy</a></li>
+                    <li><a href="" class="text-sm ">F.A.Q.</a></li>
+                    <li><a href="" class="text-sm ">Pickup Locations</a></li>
+                    <li><a href="grab&go.html" class="text-sm ">Grab & Go</a></li>
+                    <li><a href="blog.html" class="text-sm ">Blog</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/4 lg:w-1/6 px-4">
+                <div class="text-xl font-semibold mb-2">Meal Ordering</div>
+                <ul class="text_footer">
+                    <li><a href="realTimeOdering.html" class="text-sm ">Real Time Ordering</a></li>
+                    <li><a href="" class="text-sm ">Subscription Meal Selection</a></li>
+                    <li><a href="" class="text-sm ">À la Carte</a></li>
+                    <li><a href="" class="text-sm ">Proteins by the Pound</a></li>
+                    <li><a href="" class="text-sm ">Extras</a></li>
+                    <li><a href="" class="text-sm ">Gift Card</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="./button.js"></script>
+</body>
+</html>

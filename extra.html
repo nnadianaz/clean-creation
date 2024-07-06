@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .modal { display: none; }
+        .modal.show { display:block; }
+
+        .dropdown-toggle {
+        position: relative;
+      }
+
+.dropdown-toggle .dropdown {
+  display: none;
+  position: absolute;
+  background-color:#fff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-toggle:hover .dropdown {
+  display: block;
+}
+
+.dropdown-toggle .dropdown li {
+  list-style: none;
+  padding: 12px;
+  border-bottom: 1px solid #fff;
+}
+
+.dropdown-toggle .dropdown li a {
+  color: #555;
+  text-decoration: none;
+}
+
+.dropdown-toggle .dropdown li a:hover {
+  color:rgb(170, 255, 43);
+  background-color: #f9f9f9;
+}
+
+
+</style>
+</head>
+<body class="bg-white text-gray-800">
+                
+
+    <!-- ########### NAV BAR ########## -->
+
+    <header class="lg:px-16 px-4 bg-white flex flex-wrap py-4 shadow-md shadow-lg shadow-black/50 sticky top-0 bg-white shadow-lg" style="position: sticky; top: 0;
+    z-index: 1000; /*Adjust this value as needed to make sure it's higher than other elements */
+    background-color: #fff; ">
+    <nav class="navbar flex-1 flex justify-between items-center ">
+        <img src="cleanlogo.PNG" alt="Logo" class="logo"title="Clean Creations logo" onerror="this.src='https://cleancreations.com/assets/images/logo-holder.png'">
+        </div>
+    
+        <label for="menu-toggle" class="pointer-cursor md:hidden block">
+          <svg class="fill-current text-gray-900"
+            xmlns="http://www.w3.org/2000/svg" width="20" height="10" viewBox="0 0 20 20">
+            
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </label>
+        <input class="hidden" type="checkbox" id="menu-toggle" />
+        
+        <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+            <nav>
+                <ul class="navbar md:flex items-center justify-between text-base text-gray-700  pt-4 md:pt-0 ml-19">
+                    <li class="drop dropdown-toggle">
+                         <a class="dropdown-toggle md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#" data-toggle="dropdown">Shop</a>
+                          <ul class="dropdown">
+                            <li><a class="nav-link-dropdown" href="#">Catering</a></li>
+                            <li><a class="nav-link-dropdown" href="#">10 Day Detox</a></li>
+                            <li><a class="nav-link-dropdown" href="#">Subscription Options</a></li>
+                            <li><a class="nav-link-dropdown" href="#">À la Carte</a></li>
+                            <li><a class="nav-link-dropdown" href="#">Proteins by the Pound</a></li>
+                            <li><a class="nav-link-dropdown" href="#">Extras</a></li>
+                            <li><a class="nav-link-dropdown" href="#">Gift Card</a></li>
+                          </ul>
+                    </li>
+                        
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Current Menu</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Select Meals</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Grab & Go</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Blog</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Login</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm hover:text-black hover:font-bold" href="#">Sign Up</a></li>
+                    <li><a class="md:p-4 py-3 px-0 block text-sm md:mb-0 mb-2 mr-56 hover:text-black hover:font-bold" href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        <script>// Add event listeners to all menu items that create dropdowns
+            document.querySelectorAll('.dropdown-toggle').forEach((dropdownToggle) => {
+              dropdownToggle.addEventListener('mouseover', () => {
+                dropdownToggle.classList.add('show');
+              });
+              dropdownToggle.addEventListener('mouseout', () => {
+                dropdownToggle.classList.remove('show');
+              });
+            });</script>
+        <div>
+            <a href="cardPreview.html">
+            <div>
+                <div class="link_icon d-flex align-items-center justify-content-center w-100 px-2 mr-10" style="width: 110px; height: 50px; border-radius: 30px; background-color: #2d2d2d; gap: 5px; display: flex;">
+                    <i class="fas fa-shopping-bag" style="color: #fff; font-size: 20px; display: inline; margin-top: 15px; margin-left: 15px;"></i>
+                    <p style="color: #fff; margin-top: 15px;" class="totalPrice-cart-float bold">$0.00</p>
+                    <span class="badge totalItemBadge wrapTotalItemBadge" style="background: red; display: none;"></span>
+                </div>
+            </div>
+            </a>
+            </div>
+    </header>
+
+
+    <div class="bg-white py-3 flex justify-between items-center shadow-md px-6 md:px-16 mt-2">
+       <div class="flex items-center space-x-4">
+         <div class="flex items-center">
+           <img src="telephone.png" alt="telephone">
+           <span class="ml-2 text-gray-700">504-309-5427</span>
+         </div>
+         <div class="flex items-center">
+           <img src="mail.png" alt="mail">
+           <span class="ml-2 text-gray-700">customerservice@cleancreations.net</span>
+         </div>
+       </div>
+       <div class="mr-96 ">
+         <div class="flex items-center">
+           <img src="G.png" alt="Google Logo" class="w-6 h-6">
+           <a href="https://www.google.com/search?q=google+clean+creations&rlz=1C5CHFA_enUS834US834&oq=google+clean+creations&aqs=chrome..69i57j69i64.3439j0j4&sourceid=chrome&ie=UTF-8#lrd=0x8620a6936c929f63:0xde3ec33732ca53cb,3,,," target="_blank" class="text-black font-bold hover:text-[#3CD65B]">Review on Google</a>
+         </div>
+       </div>
+       <div class="flex items-center w-50 fixed right-20 top-20 bg-white rounded-lg p-4 z-50">
+         <img src="timer.png" alt="" srcset="" class="w-6 h-6 mr-4">
+         <div id="timer" class="text-lg font-bold font-sans ">
+           <span id="days">00</span> days 
+           <span id="hours">00</span> h 
+           <span id="minutes">00</span> m 
+           <span id="seconds">00</span> s
+         </div>
+       </div>
+     </div>
+     <script>
+        // Set the initial count down time
+var initialCountDownTime = 2 * 24 * 60 * 60 * 1000 + 60 * 60 * 1000 + 60 * 1000 + 1000;
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get the current count down time
+    var now = initialCountDownTime;
+
+    // Decrement the count down time by 1 second
+    now -= 1000;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(now / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((now % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((now % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((now % (1000 * 60)) / 1000);
+
+    // Display the result in the elements with id
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the count down is finished, write some text
+    if (now <= 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+
+    // Update the initial count down time for the next iteration
+    initialCountDownTime = now;
+}, 1000);
+     </script>
+
+
+
+    
+    <main class="max-w-8xl mx-auto px-24 bg-white shadow-md mt-6">
+        <section>
+            <h1 class="text-3xl font-semibold py-3">PRIVATE POLICY</h1>
+            <h2 class=" text-lg font-medium mb-4">Clean Creations PRIVATE POLICY</h2>
+            <h2 class="text-base font-medium mb-4">Last Updated on June 16, 2023. This privacy policy is effective immediately.</h2>
+            <h2 class=" text-xl font-medium mb-4">Introduction</h2>
+            <p class="font-medium mb-2">At Clean Creations , we respect your privacy and are committed to protecting it through our compliance with this policy.</p>
+            <p class="font-medium mb-4 leading-6">This policy describes the types of information we may collect from you or that you may provide when you visit this website (our “Website”) and our practices for collecting, using, maintaining, protecting and disclosing that information.</p>
+            <p class="font-medium mb-4">This policy applies to information we collect:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">On this Website.</li>
+                <li class="leading-9">In e-mail, text and other electronic messages between you and this Website.</li>
+                <li class="leading-9">Through mobile and desktop applications you download from this Website, which provide dedicated non-browser-based interaction between you and this Website.</li>
+                <li class="leading-9">When you interact with our advertising and applications on third-party websites and services, if those applications or advertising include links to this policy.</li>
+            </ul>
+            <p class="font-medium mb-4">It does not apply to information collected by:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">us offline or through any other means, including on any other website operated by Company or any third party (including our affiliates and subsidiaries); or</li>
+                <li class="leading-9">any third party (including our affiliates and subsidiaries), including through any application or content (including advertising) that may link to or be accessible from or on the Website.</li>
+            </ul>
+            <p class="font-medium mb-4 leading-6">Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is not to use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time. Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
+            <h3 class=" text-2xl font-medium mb-4 leading-9">Children Under The Age Of 13</h3>
+            <p class=" text-base font-medium mb-4 leading-6">Our Website is not intended for children under 13 years of age. No one under age 13 may provide any personal information to or on the Website. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information on this Website or on or through any of its features/register on the Website, make any purchases through the Website, use any of the interactive or public comment features of this Website or provide any information about yourself to us, including your name, address, telephone number, e-mail address or any screen name or user name you may use. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us via our contact us link.</p>
+            <h3 class=" text-2xl font-medium mb-4 leading-9">Information We Collect About You And How We Collect It</h3>
+            <p class="font-medium mb-4">We collect several types of information from and about users of our Website, including information:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">by which you may be personally identified, such as name, postal address, e-mail address, telephone number or ANY OTHER INFORMATION THE WEBSITE COLLECTS THAT IS DEFINED AS PERSONAL OR PERSONALLY IDENTIFIABLE INFORMATION UNDER AN APPLICABLE LAW (“personal information”);</li>
+                <li class="leading-9">that is about you but individually does not identify you, and/or</li>
+                <li class="leading-9">about your internet connection, the equipment you use to access our Website and usage details.</li>
+            </ul>
+            <p class="font-medium mb-4">We collect this information:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Directly from you when you provide it to us.</li>
+                <li class="leading-9">Automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses and information collected through cookies, web beacons and other tracking technologies.</li>
+                <li class="leading-9">From third parties, for example, our business partners.</li>
+            </ul>
+            <h3 class=" text-2xl font-medium mb-4 leading-9">Information You Provide To Us.</h3>
+            <p class="font-medium mb-4">The information we collect on or through our Website may include:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Information that you provide by filling in forms on our Website. This includes information provided at the time of registering to use our Website, subscribing to our service, posting material or requesting further services. We may also ask you for information when you report a problem with our Website.</li>
+                <li class="leading-9">Records and copies of your correspondence (including e-mail addresses), if you contact us.</li>
+                <li class="leading-9">Your responses to surveys that we might ask you to complete for research purposes.</li>
+                <li class="leading-9">Details of transactions you carry out through our Website and of the fulfillment of your orders. You may be required to provide financial information before placing an order through our Website.</li>
+                <li class="leading-9">Your search queries on the Website.</li>
+            </ul>
+            <p class=" text-base font-medium mb-4 leading-6">You also may provide information to be published or displayed (hereinafter, “posted”) on public areas of the Website, or transmitted to other users of the Website or third parties (collectively, “User Contributions”). Your User Contributions are posted on and transmitted to others at your own risk. Although we limit access to certain pages/you may set certain privacy settings for such information by logging into your account profile, please be aware that no security measures are perfect or impenetrable. Additionally, we cannot control the actions of other users of the Website with whom you may choose to share your User Contributions. Therefore, we cannot and do not guarantee that your User Contributions will not be viewed by unauthorized persons.</p>
+
+            <h2 class="text-2xl font-medium mb-4">Information We Collect Through Automatic Data Collection Technologies.</h2>
+            <p class=" text-base font-medium mb-4 leading-6">As you navigate through and interact with our Website, we may use automatic data collection technologies to collect certain information about your equipment, browsing actions and patterns, including:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Details of your visits to our Website, including traffic data, location data, and other communication data and the resources that you access and use on the Website.</li>
+                <li class="leading-9">Information about your computer and internet connection, including your IP address, operating system and browser type.</li>
+            </ul>
+            <p class=" text-base font-medium mb-4 leading-6">We also may use these technologies to collect information about your online activities over time and across third-party websites or other online services (behavioral tracking). The information we collect automatically is statistical data and does not include personal information, but we may maintain it or associate it with personal information we collect in other ways or receive from third parties. It helps us to improve our Website and to deliver a better and more personalized service, including by enabling us to:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Estimate our audience size and usage patterns.</li>
+                <li class="leading-9">Store information about your preferences, allowing us to customize our Website according to your individual interests.</li>
+                <li class="leading-9">Speed up your searches.</li>
+                <li class="leading-9">Recognize you when you return to our Website.</li>
+            </ul>
+            <p class=" text-base font-medium mb-4 leading-6">The technologies we use for this automatic data collection may include:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Cookies (or browser cookies). A cookie is a small file placed on the hard drive of your computer. You may refuse to accept browser cookies by activating the appropriate setting on your browser. However, if you select this setting you may be unable to access certain parts of our Website. Unless you have adjusted your browser setting so that it will refuse cookies, our system will issue cookies when you direct your browser to our Website.</li>
+                <li class="leading-9">Flash Cookies. Certain features of our Website may use local stored objects (or Flash cookies) to collect and store information about your preferences and navigation to, from and on our Website. Flash cookies are not managed by the same browser settings as are used for browser cookies.</li>
+                <li class="leading-9">Web Beacons. Pages of our the Website may contain small electronic files known as web beacons (also referred to as clear gifs. pixel tags and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an e-mail and for other related website statistics (for example, recording the popularity of certain website content and verifying system and server integrity).</li>
+            </ul>    
+            <p class=" text-base font-medium mb-3 leading-6">We do not collect personal Information automatically, but we may tie this information to personal information about you that we collect from other sources or you provide to us.</p>
+            <p class="text-base font-light mb-2">Clean Creations collects data about your activities that does not personally or directly identify you when you visit our website, the website of entities for which we serve advertisements, or the websites and online services where we display advertisements. This information may include the content you view, the date and time that you view this content, the products you purchase, or your location information associated with your IP address. We use the information we collect to serve you more relevant advertisements (referred to as “Retargeting”). We collect information about where you saw the ads we serve you and what ads you clicked on.</p>
+            <p class="text-base font-light mb-2">Clean Creations supports the Privacy of all online users, for all Purposes. Please use the following Links to Protect yourself from online Tagging and Tracking</p>
+            <p class="text-base font-light mb-2">You may opt out of the automated collection of information by third-party ad networks for the purpose of delivering advertisements tailored to your interests, by opt-out of your Google Display Network ads` preferences at http://www.google.com/ads/preferences/.</p>
+            <p class="text-base font-light mb-2">Text marketing (if applicable): With your permission, we may send text messages about our store, new products, and other updates. Updates include Checkout Reminders.</p>
+            <p class="text-base font-light mb-4">Webhooks will be used to trigger the Checkout Reminders messaging system.</p>
+
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Third-Party Use Of Cookies And Other Tracking Technologies.</h3>
+            <p class=" text-base font-medium mb-4 leading-6">Some content or applications, including advertisements, on the Website are served by third-parties, including advertisers, ad networks and servers, content providers and application providers. These third parties may use cookies alone or in conjunction with web beacons or other tracking technologies to collect information about you when you use our website. The information they collect may be associated with your personal information or they may collect information, including personal information, about your online activities over time and across different websites and other online services. They may use this information to provide you with interest-based (behavioral) advertising or other targeted content.</p>
+            <p class=" text-base font-medium mb-4 leading-6">We do not control these third parties` tracking technologies or how they may be used. If you have any questions about an advertisement or other targeted content, you should contact the responsible provider directly.</p>
+            
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">How We Use Your Information</h3>
+            <p class=" text-base font-medium mb-3 leading-6">We use information that we collect about you or that you provide to us, including any personal information:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">To present our Website and its contents to you.</li>
+                <li class="leading-9">To provide you with information, products or services that you request from us.</li>
+                <li class="leading-9">To provide you with information about our services</li>
+                <li class="leading-9">To provide you with notices about your account/subscription, including expiration and renewal notices.</li>
+                <li class="leading-9">To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.</li>
+                <li class="leading-9">To notify you about changes to our Website or any products or services we offer or provide though it.</li>
+                <li class="leading-9">To allow you to participate in interactive features on our Website.</li>
+                <li class="leading-9">In any other way we may describe when you provide the information.</li>
+                <li class="leading-9">To fulfill any purpose for which you provide it.</li>
+                <li class="leading-9">For any other purpose with your consent.</li>
+            </ul>
+            <p class=" text-base font-medium mb-4 leading-6">We may use the information we have collected from you to enable us to display advertisements to our advertisers' target audiences. Even though we do not disclose your personal information for these purposes without your consent, if you click on or otherwise interact with an advertisement, the advertiser may assume that you meet its target criteria.</p>
+            
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Disclosure Of Your Information</h3>
+            <p class=" text-base font-medium mb-3 leading-6">We may disclose aggregated information about our users, and information that does not identify any individual, without restriction.</p>
+            <p class=" text-base font-medium mb-3 leading-6">We may disclose personal information that we collect or you provide as described in this privacy policy:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">To our subsidiaries and affiliates.</li>
+                <li class="leading-9">To contractors, service providers and other third parties we use to support our business and who are bound by contractual obligations to keep personal information confidential and use it only for the purposes for which we disclose it to them.</li>
+                <li class="leading-9">To a buyer or other successor in the event of a merger, divestiture, restructuring, reorganization, dissolution or other sale or transfer of some or all of the Company's assets, whether as a going concern or as part of bankruptcy, liquidation or similar proceeding, in which personal information held by the Company about our Website users is among the assets transferred.</li>
+                <li class="leading-9">To third parties to market their products or services to you if you have consented to these disclosures. We contractually require these third parties to keep personal information confidential and use it only for the purposes for which we disclose it to them.</li>
+                <li class="leading-9">To fulfill the purpose for which you provide it. For example, if you give us an e-mail address to use the “e-mail a friend” feature of our Website, we will transmit the contents of that e-mail and your e-mail address to the recipients.</li>
+                <li class="leading-9">For any other purpose disclosed by us when you provide the information.</li>
+                <li class="leading-9">With your consent.</li>
+            </ul>   
+            <p class=" text-base font-medium mb-3 leading-6">We may also disclose your personal information:</p>     
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">To comply with any court order, law or legal process, including to respond to any government or regulatory request.</li>
+                <li class="leading-9">To enforce or apply our terms of use and other agreements, including for billing and collection purposes.</li>
+                <li class="leading-9">If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of the Company, our customers or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</li>
+            </ul>    
+
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Choices About How We Use And Disclose Your Information</h3>
+            <p class=" text-base font-medium mb-3 leading-6">We strive to provide you with choices regarding the personal information you provide to us. We have created mechanisms to provide you with the following control over your information:</p>
+            <ul class="list-disc list-inside  text-base font-light mb-4">
+                <li class="leading-9">Tracking Technologies and Advertising. You can set your browser to refuse all or some browser cookies, or to alert you when cookies are being sent. To learn how you can manage your Flash cookie settings, visit the Flash player settings page on Adobe's website. If you disable or refuse cookies, please note that some parts of this site may then be inaccessible or not function properly.</li>
+                <li class="leading-9">We do not control third parties' collection or use of your information to serve interest-based advertising. However these third parties may provide you with ways to choose not to have your information collected or used in this way. You can opt out of receiving targeted ads from members of the Network Advertising Initiative (“NAI”) on the NAI's website.</li>
+            </ul>
+
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Accessing And Correcting Your Information</h3>
+            <p class=" text-base font-medium mb-3 leading-6">You may send us an e-mail via our contact link to request access to, correct or delete any personal information that you have provided to us. We cannot delete your personal information except by also deleting your user account. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or cause the information to be incorrect.</p>
+            <p class=" text-base font-medium mb-4 leading-6">If you delete your User Contributions from the Website, copies of your User Contributions may remain viewable in cached and archived pages, or might have been copied or stored by other Website users. Proper access and use of information provided on the Website, including User Contributions, is governed by our terms of use.</p>
+
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Your California Privacy Rights</h3>
+            <p class=" text-base font-medium mb-4 leading-6">California Civil Code Section § 1798.83 permits users of our Website that are California residents to request certain information regarding our disclosure of personal information to third parties for their direct marketing purposes. To make such a request, please contact us via the Contact Us link.</p>
+ 
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Data Security</h3>
+            <p class=" text-base font-medium mb-3 leading-6">We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration and disclosure</p>
+            <p class=" text-base font-medium mb-3 leading-6">The safety and security of your information also depends on you. Where we have given you (or where you have chosen) a password for access to certain parts of our Website, you are responsible for keeping this password confidential. We ask you not to share your password with anyone.</p>
+            <p class=" text-base font-medium mb-4 leading-6">Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our Website. Any transmission of personal information is at your own risk. We are not responsible for circumvention of any privacy settings or security measures contained on the Website.</p>
+   
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Changes To Our Privacy Policy</h3>
+            <p class=" text-base font-medium mb-4 leading-6">It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users’ personal information, we will notify you by e-mail to the e-mail address specified in your account and/or through a notice on the Website home page. The date the privacy policy was last revised is identified at the top of the page. You are responsible for ensuring we have an up-to-date active and deliverable e-mail address for you, and for periodically visiting our Website and this privacy policy to check for any changes.</p>
+
+            <h3 class=" text-2xl text-base font-medium mb-4 leading-6">Contact Information</h3>
+            <p class=" text-base font-medium mb-4 leading-6">To ask questions or comment about this privacy policy and our privacy practices, contact via our <span class=" hover:text-green-500 cursor-pointer font-bold">Contact Us</span> link.</p>
+            <p class=" text-base font-medium mb-4 leading-6">Thank You for Visiting our Website</p>
+        </section>
+    </main>
+    
+    <!--########### Footer ###############-->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <!-- Left Side -->
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h1 class="text-3xl font-bold mb-4">Clean Creations</h1>
+                    <p class="text-gray-400 hover:text-green-500 cursor-pointer">504-309-5427</p>
+                    <p class="text-gray-400 hover:text-green-500 cursor-pointer">customerservice@cleancreations.net</p>
+                    <div class="flex mt-4">
+                        <input type="Sign up for Newsletter" placeholder="Sign up for Newsletter" class="w-48 mr-2 py-3 px-1 text-sm text-left bg-white text-gray-900 rounded-md">
+                        <button class="w-28 py-3 px-1 text-sm bg-white text-gray-400 rounded-md" onclick="document.getElementById('inviteFriend').classList.add('show')">Invite a friend</button>
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="fab fa-twitter bg-white text-black p-3 rounded-full hover:bg-gray-500 text-lg"></a>
+                        <a href="#" class="fab fa-facebook-f bg-white text-black p-3 rounded-full hover:bg-gray-500 text-lg ml-4"></a>
+                        <a href="#" class="fab fa-instagram bg-white text-black p-3 rounded-full hover:bg-gray-500 text-lg ml-4"></a>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">© 2024 Clean Creations. All Rights Reserved.</p>
+                </div>
+                <!-- Middle Side -->
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h2 class="text-lg font-bold mb-4">Clean Creations</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Current Menu</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">F.A.Q.</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Pickup Locations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Grab & Go</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Right Side -->
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h2 class="text-lg font-bold mb-4">Meal Ordering</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Real Time Ordering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Subscription Meal Selection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">À la Carte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Proteins by the Pound</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 " onclick="document.getElementById('Extras').classList.add('show')">Extras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500">Gift Card</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+<!-- Modal
+<div id="inviteFriend" class="modal fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="modal-dialog 6h20v2H0v-2z w-full max-w-3xl bg-white text-gray-600 rounded-md">
+        <div class="modal-content p-4">
+            <button class="close text-gray-400 hover:text-green-500 float-right" onclick="document.getElementById('inviteFriend').classList.remove('show')">✖</button>
+            <div class="flex flex-wrap p-4">
+                <img src="https://cleancreations.com//assets/images/referral-side-image.png" class="w-1/2 h-auto mb-4 md:mb-0">
+                <div class="w-1/2 pl-4">
+                    <h2 class="text-lg font-semibold mb-2">Invite your Friends and get $20.00</h2>
+                    <span class="font-bold text-3xl">&nbsp;&nbsp;0</span><p>Friends</p>
+                    <script>
+                        // Function to update the friends count
+                        function updateFriendsCount(count) {
+                            document.getElementById('friendsCount').innerText = count;
+                        }
+                    
+                        // Example usage: Update the friends count to 5
+                        updateFriendsCount(5);
+                    </script>
+                    <div class="mt-4">
+                        <label for="email" class="block">Your Email:</label>
+                        <input type="email" id="email" placeholder="Your registered email" class="w-full p-2 mt-1 bg-gray-100 text-gray-200 rounded-md">
+                    </div>
+                    <div class="mt-4">
+                        <label for="password" class="block">Password:</label>
+                        <input type="password" id="password" placeholder="Your password" class="w-full p-2 mt-1 bg-gray-100 text-gray-200 rounded-md">
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://cleancreations.com/register" class="text-gray-400 hover:text-green-500 cursor-pointer">Don't have an account?</a>
+                        <a href="#" class="text-gray-400 hover:text-green-500 cursor-pointer ml-4" onclick="this.innerText = 'Forgot Password'; this.style.textDecoration = 'underline';">Forgot Password</a>
+                    </div>
+                    <button class="w-full mt-4 p-2 bg-green-500 text-white hover:shadow-md rounded-md">Login</button>
+                    <p class="text-sm text-gray-400 mt-4">* After your friend registers an account and makes their first purchase, both you and your friend will receive $20.00. Please note, when you Refer a Friend, you are agreeing to our <a href="#" class="text-green-500 hover:underline">Terms & Conditions *</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+</body>
+</html>
